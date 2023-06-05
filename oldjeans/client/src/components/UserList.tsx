@@ -22,7 +22,7 @@ const style: { [key: string]: React.CSSProperties } = {
     marginBottom: "10px",
   },
   avatar: {
-    margin: "20px",
+    margin: "30px",
   },
 };
 
@@ -40,7 +40,7 @@ const UserList: React.FC<Props> = (props) => {
             justify="flex-start"
             alignItems="flex-start"
           >
-            <Typography variant="body1">{u.name}</Typography>
+            <Typography variant="h6">{u.name}</Typography>
             <Chip
               color={u.isOnline ? "primary" : "default"}
               size="small"

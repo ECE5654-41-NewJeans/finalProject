@@ -4,7 +4,6 @@ import {
   Grid,
   Paper,
   Typography,
-  Avatar,
   TextField,
   Chip,
 } from "@material-ui/core";
@@ -17,9 +16,8 @@ import { Session } from "../App";
 
 const style: { [key: string]: React.CSSProperties } = {
   container: {
-    height: "80vh",
-    padding: "2rem",
-    width: "85vw",
+    height: "95vh",
+    width: "75vw",
   },
   paper: {
     padding: "30px",
@@ -27,11 +25,8 @@ const style: { [key: string]: React.CSSProperties } = {
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
-    backgroundColor: "lightslategrey",
-  },
-  avatar: {
-    margin: "20px",
-  },
+    backgroundColor: "rgb(220, 220, 255)",
+  }
 };
 
 interface Props {
@@ -72,7 +67,7 @@ const Chat: React.FC<Props> = (props) => {
               style={{
                 height: "100%",
                 width: "100%",
-                backgroundColor: "aliceblue",
+                backgroundColor: "rgb(186,206,224)",
                 display: "flex",
                 flexDirection: "column",
               }}
@@ -80,25 +75,24 @@ const Chat: React.FC<Props> = (props) => {
               {/* {name banner} */}
               <div
                 style={{
-                  height: "10%",
+                  height: "8%",
                   display: "flex",
                   alignItems: "center",
                 }}
               >
-                <Avatar style={style.avatar} />
+                 <Chip
+                    color="primary"
+                    size="small"
+                    style={{ width: "70px", marginLeft: "10px" }}
+                    label="online"
+                  />
                 <Grid
                   container
                   direction="column"
                   justify="center"
                   alignItems="center"
                 >
-                  <Typography variant="button">{user.name}</Typography>
-                  <Chip
-                    color="primary"
-                    size="small"
-                    style={{ width: "70px" }}
-                    label="online"
-                  />
+                  <Typography variant="h5">{user.name}</Typography>
                 </Grid>
               </div>
               <Divider />
@@ -117,8 +111,7 @@ const Chat: React.FC<Props> = (props) => {
               >
                 <TextField
                   fullWidth
-                  variant="outlined"
-                  placeholder="Start Typing..."
+                  variant="standard"
                   value={msg}
                   onChange={(e) => setMsg(e.target.value)}
                   InputProps={{
