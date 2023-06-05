@@ -1,9 +1,9 @@
 # React gRPC Chat Application
 
-## ECE5654 Term Project
+## ECE5654-41 Term Project
 
-### Team. <b><span style="color:skyblue">LEE CHANWOO, SUCK BOHYUN</span></b>
-<hr><br>
+### Team. <span style="color:skyblue">**LEE CHANWOO, SUCK BOHYUN**</span>
+<br>
 
 ## Things you need to run this application
 
@@ -26,7 +26,7 @@ yarn start
 ## Error solution
 1. docker compose error
    ![docker error](/oldjeans/readmeImg/docker_error_sol.PNG)
-   Expose daemon on tcp://localhost:2375 without TLS <b><span style="color:red">disable cheack</span></b>
+   Expose daemon on tcp://localhost:2375 without TLS <span style="color:red">**disable cheack**</span>
 
 ### References
 ```
