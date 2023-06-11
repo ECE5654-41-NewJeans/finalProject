@@ -18,7 +18,7 @@ const ImageGalleryDialog: React.FC<Props> = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://picsum.photos/v2/list?limit=18&page=1`
+      `https://picsum.photos/v2/list?limit=12&page=3`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -32,10 +32,10 @@ const ImageGalleryDialog: React.FC<Props> = (props) => {
         {"Select your image Profile"}
       </DialogTitle>
       <DialogContent>
-        <GridList cellHeight={160} cols={3}>
+        <GridList cellHeight={120} cols={3}>
           {images.map((img) => (
             <GridListTile
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", marginTop: "25px"}}
               key={img.id}
               cols={1}
               onClick={() => onImageSelect(img.download_url)}
