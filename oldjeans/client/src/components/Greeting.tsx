@@ -5,12 +5,13 @@ import TextField from "@material-ui/core/TextField";
 import Avatar from "@material-ui/core/Avatar";
 import { IconButton, Tooltip } from "@material-ui/core";
 import ImageGalleryDialog from "./ImageGallery";
+import "./style.css";
 
 const style: { [key: string]: React.CSSProperties } = {
   paper: {
     height: "600px",
     width: "800px",
-    backgroundColor: "black",
+    backgroundColor: "#448AFF",
     color: "white",
     display: "flex",
     justifyContent: "center",
@@ -29,7 +30,7 @@ const style: { [key: string]: React.CSSProperties } = {
   avatar: {
     height: 100,
     width: 100,
-    border: "6px solid grey",
+    border: "4px solid lightblue",
     margin: "2rem 0rem",
   },
 };
@@ -59,6 +60,7 @@ const Greeting: React.FC<Props> = (props) => {
   return (
     <>
       <Paper style={style.paper}>
+      <img className="logoImg" alt="logo" src="img/logo.png" />
         <form onSubmit={handleSubmit} style={style.form}>
           <Typopgraphy variant="h4">
             Please enter your name before joining the chat
@@ -85,7 +87,7 @@ const Greeting: React.FC<Props> = (props) => {
             InputProps={{
               style: {
                 fontSize: "26px",
-                color: "skyblue",
+                color: "black",
               },
             }}
           />

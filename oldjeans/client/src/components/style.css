@@ -32,3 +32,10 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.logoImg {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  margin-bottom: 600px;
+}
