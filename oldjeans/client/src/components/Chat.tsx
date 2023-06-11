@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Divider,
   Grid,
@@ -47,6 +47,18 @@ const Chat: React.FC<Props> = (props) => {
     onMessageSubmit(msg, () => setMsg(""));
   };
 
+   useEffect(() => {
+    const storedMsg = localStorage.getItem("chatMsg");
+    if (storedMsg) {
+      setMsg(storedMsg);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("chatMsg", msg);
+  }, [msg]);
+
+
   return (
     <form onSubmit={handleSendMessage}>
       <Grid container style={style.container} spacing={3}>
@@ -79,7 +91,7 @@ const Chat: React.FC<Props> = (props) => {
                   alignItems: "center",
                 }}
               >
-                 <Chip
+                  <Chip
                     color="primary"
                     size="small"
                     style={{ width: "70px", marginLeft: "10px" }}
