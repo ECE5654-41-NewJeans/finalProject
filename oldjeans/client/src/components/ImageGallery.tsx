@@ -18,9 +18,7 @@ const ImageGalleryDialog: React.FC<Props> = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://picsum.photos/v2/list?limit=18&page=${Math.floor(
-        Math.random() * 10
-      )}`
+      `https://picsum.photos/v2/list?limit=18&page=1`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -31,7 +29,7 @@ const ImageGalleryDialog: React.FC<Props> = (props) => {
   return (
     <Dialog open={isOpen} keepMounted aria-labelledby="dialog-slide-title">
       <DialogTitle id="dialog-slide-title">
-        {"Select your image avatar"}
+        {"Select your image Profile"}
       </DialogTitle>
       <DialogContent>
         <GridList cellHeight={160} cols={3}>
