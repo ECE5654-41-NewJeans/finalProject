@@ -8,7 +8,6 @@ import {
   Chip,
 } from "@material-ui/core";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import SendIcon from "@material-ui/icons/Send";
 import UserList from "./UserList";
 import ChatBubble from "./ChatBubble";
 import { Status, StreamMessage, User } from "../proto/random_pb";
@@ -25,7 +24,7 @@ const style: { [key: string]: React.CSSProperties } = {
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
-    backgroundColor: "rgb(220, 220, 255)",
+    backgroundColor: "#C8D8E6",
   }
 };
 
@@ -96,7 +95,7 @@ const Chat: React.FC<Props> = (props) => {
                 </Grid>
               </div>
               <Divider />
-              <div style={{ height: "752px", overflowY: "auto" }}>
+              <div style={{ height: "852px", overflowY: "auto" }}>
                 {messages.map((msg, i) => (
                   <ChatBubble
                     key={i}
@@ -117,7 +116,6 @@ const Chat: React.FC<Props> = (props) => {
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
-                        <SendIcon />
                       </InputAdornment>
                     ),
                   }}
